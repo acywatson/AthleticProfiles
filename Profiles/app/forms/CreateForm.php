@@ -16,17 +16,23 @@ class CreateForm extends Form
 
       $strengthScore->setLabel("Strength Score");
 
+      $strengthScore->setAttribute("class", "form-control");
+
       $this->add($strengthScore);
 
       $enduranceScore = new Text("enduranceScore");
 
       $enduranceScore->setLabel("Endurance Score");
 
+      $enduranceScore->setAttribute("class", "form-control");
+
       $this->add($enduranceScore);
 
       $balanceScore = new Text("balanceScore");
 
       $balanceScore->setLabel("Balance Score");
+
+      $balanceScore->setAttribute("class", "form-control");
 
       $this->add($balanceScore);
 
@@ -47,6 +53,9 @@ class CreateForm extends Form
 
             );
       $sport->setLabel("Sport");
+
+      $sport->setAttribute("class", "form-control");
+
       $this->add($sport);
     }
 }

@@ -33,3 +33,54 @@ p, label, a{
   font-family: 'Pontano Sans', sans-serif;
 
 }
+
+.session-index{
+
+  padding-top: 50px;
+
+}
+
+.form-group{
+
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  display: block;
+
+}
+
+.signup{
+
+  text-align: center;
+
+}
+
+.login-image h1{
+
+  text-align: center;
+
+}
+
+.login-image img{
+
+  display: block;
+  margin: auto;
+
+}
+
+/* register */
+
+.register h1{
+
+text-align: center;
+
+}
+
+/* create.volt */
+
+.create-profile h1{
+
+text-align: center;
+
+}

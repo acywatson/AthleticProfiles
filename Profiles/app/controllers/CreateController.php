@@ -28,7 +28,7 @@ class CreateController extends ControllerBase
 
                 if ($profile->save()) {
                     return $this->dispatcher->forward([
-                        'controller' => 'index',
+                        'controller' => 'session',
                         'action' => 'index'
                     ]);
                 }

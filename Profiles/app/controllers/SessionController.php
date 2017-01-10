@@ -7,10 +7,14 @@ class SessionController extends ControllerBase
   {
       $this->tag->setTitle('Sign Up/Sign In');
 
+      $this->assets->addCss("css/style.css");
+      $this->assets->addCss("https://fonts.googleapis.com/css?family=Pontano+Sans|Righteous", false);
+
   }
 
   public function indexAction()
   {
+    
       if (!$this->request->isPost()) {
           $this->tag->setDefault('email', 'youremail@yourdomain.com');
           $this->tag->setDefault('password', 'phalcon');

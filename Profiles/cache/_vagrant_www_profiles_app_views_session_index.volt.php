@@ -1,11 +1,16 @@
-<?= $this->elements->getMenu() ?>
+<?php $this->assets->outputCss(); ?>
 
 <div class="container-fluid session-index">
 
   <div class="row">
 
     <div class="col-lg-12">
-
+    <div class="login-image">
+    <?php
+    echo $this->tag->image("img/SISU_Logo_2016_300x300.png");
+    ?>
+    <h1>Athletic Profile Creator</h1>
+    </div>
 <?= $this->getContent() ?>
 
 <?= $this->tag->form(['session/start', 'role' => 'form']) ?>
@@ -34,10 +39,12 @@
   <div class="row">
 
     <div class="col-lg-12">
-    <p>No Account Yet?</p>
+    <div class="signup form-group">
+    <p>Don't have an account yet?</p>
     <?php
-    echo Phalcon\Tag::linkTo("create", "Sign Up!");
+    echo Phalcon\Tag::linkTo(["create", "Sign Up!", "class" => "btn btn-large btn-primary"]);
     ?>
+    </div>
 
     </div>
 

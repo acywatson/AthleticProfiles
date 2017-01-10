@@ -1,6 +1,6 @@
 <?php $this->assets->outputCss(); ?>
 
-<div class="container-fluid">
+<div class="container-fluid create-profile">
   <div class="row">
     <div class="col-lg-12">
 
@@ -29,18 +29,21 @@
                 echo "</div>";
             }
 
-            echo "<p>";
+            echo '<div class="form-group">';
 
             echo '<label for="', $element->getName(), '">', $element->getLabel(), "</label>  ";
 
+            echo '<div class="controls">';
+
             echo $element;
 
-            echo "</p>";
+            echo "</div></div>";
         }
 
     ?>
-
-    <input type="submit" value="Create" />
+    <div class="form-group">
+    <input type="submit" value="Create" class="btn btn-large btn-primary"/>
+    </div>
 </form>
 
     </div> <!-- col-lg-12 -->
