@@ -1,0 +1,15 @@
+body{
+
+  background-image: url('../img/IMG_7304.JPG');
+  background-size: cover;
+
+}
+
+.jumbotron h1, h3, p{
+
+  width: 100%;
+  text-align: center;
+
+}
+
+.jumbotron p{}
