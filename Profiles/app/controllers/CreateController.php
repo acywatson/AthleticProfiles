@@ -9,11 +9,39 @@ class CreateController extends ControllerBase
       $this->assets->addCss("css/style.css");
       $this->assets->addCss("https://fonts.googleapis.com/css?family=Pontano+Sans|Righteous", false);
 
+      $this->view->form = new SignupForm;
+
     }
 
     public function signupAction(){
 
+      $this->assets->addCss("css/style.css");
+      $this->assets->addCss("https://fonts.googleapis.com/css?family=Pontano+Sans|Righteous", false);
+
+      $this->view->form = new SignupForm;
+
       if ($this->request->isPost()) {
+
+        $email = $this->request->getPost('email');
+
+        //var_dump($email);
+
+        $userExists = Profiles::findFirst("email='$email'");
+
+        //var_dump($userExists);
+        //exit;
+
+        if($userExists){
+
+          $this->flash->error("This email address is already registered.");
+
+          //email address already exists.  Redirect back to signup form and throw an error.
+
+          return $this->dispatcher->forward([
+              'action' => 'index',
+          ]);
+
+        }else{
 
                 $profile = new Profiles([
                     'firstName'      => $this->request->getPost('firstName', 'striptags'),
@@ -33,10 +61,9 @@ class CreateController extends ControllerBase
                         'action' => 'index'
                     ]);
                 }
-                $this->flash->error($user->getMessages());
+                $this->flash->error($profile->getMessages());
+            }
 
         }
     }
-
-
 }

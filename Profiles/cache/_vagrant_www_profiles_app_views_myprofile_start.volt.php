@@ -24,7 +24,7 @@ echo Phalcon\Tag::linkTo(["myprofile/instructions", "I'm ready now!", "class" =>
 ?>
 
 <?php
-echo Phalcon\Tag::linkTo(["index", "I'll do it later!", "class" => "btn btn-large btn-primary"]);
+echo Phalcon\Tag::linkTo(["myprofile/index", "I'll do it later!", "class" => "btn btn-large btn-primary"]);
 ?>
 
     </div> <!-- col-lg-12 -->

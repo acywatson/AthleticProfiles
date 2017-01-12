@@ -1,6 +1,12 @@
-<?php $this->assets->outputCss(); ?>
+<?php
+
+$this->assets->outputCss();
+
+?>
+
 
 <?= $this->tag->getDoctype() ?>
+<?= $this->getContent() ?>
 
 <html>
 
@@ -10,45 +16,45 @@
 
       <h1>Create an Account</h1>
 
-<?= $this->tag->form(['create/signup', 'method' => 'post']) ?>
+      <form method="post" action="/Profiles/create/signup">
 
-  <fieldset>
+          <?php
 
-  <div class="form-group">
+              // Traverse the form
 
-    <label for="name">First Name</label>
+              foreach ($form as $element) {
+                  // Get any generated messages for the current element
+                  $messages = $form->getMessagesFor(
+                      $element->getName()
+                  );
 
-    <div class="controls">
+                  if (count($messages)) {
+                      // Print each element
+                      echo '<div class="messages">';
 
-    <?= $this->tag->textField(['firstName', 'size' => 32, 'class' => 'form-control']) ?>
+                      foreach ($messages as $message) {
+                          echo $message;
+                      }
 
-   </div>
-  </div>
+                      echo "</div>";
+                  }
 
-    <div class="form-group">
-    <label for="name">Last Name</label>
-    <div class="controls">
-    <?= $this->tag->textField(['lastName', 'size' => 32, 'class' => 'form-control']) ?>
-  </div>
- </div>
-    <div class="form-group">
-    <label for="type">Email</label>
-    <div class="controls">
-    <?= $this->tag->textField(['email', 'size' => 32, 'class' => 'form-control']) ?>
-  </div>
- </div>
-    <div class="form-group">
-    <label for="type">Password</label>
-    <div class="controls">
-    <?= $this->tag->passwordField(['password', 'size' => 32, 'class' => 'form-control']) ?>
-  </div>
- </div>
-    <div class="form-group">
-    <?= $this->tag->submitButton(['Send', 'class' => 'btn btn-large btn-primary']) ?>
-  </div>
-</fieldset>
+                  echo '<div class="form-group">';
 
-<?= $this->tag->endForm() ?>
+                  echo '<label for="', $element->getName(), '">', $element->getLabel(), "</label>  ";
+
+                  echo '<div class="controls">';
+
+                  echo $element;
+
+                  echo "</div></div>";
+              }
+
+          ?>
+          <div class="form-group">
+          <input type="submit" value="Create" class="btn btn-large btn-primary"/>
+          </div>
+      </form>
 
 </div>
 </div>
