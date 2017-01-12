@@ -28,7 +28,7 @@ class MyprofileController extends ControllerBase{
       $this->dispatcher->forward([
 
         'controller' => 'myprofile',
-        'action'     => 'create',
+        'action'     => 'start',
 
       ]);
 
@@ -86,6 +86,24 @@ class MyprofileController extends ControllerBase{
     };
 
   }
+
+ }
+
+ public function startAction(){
+
+   $this->assets->addCss("css/style.css");
+   $this->assets->addCss("https://fonts.googleapis.com/css?family=Pontano+Sans|Righteous", false);
+
+
+
+ }
+
+ public function instructionsAction(){
+
+   $this->assets->addCss("css/style.css");
+   $this->assets->addCss("https://fonts.googleapis.com/css?family=Pontano+Sans|Righteous", false);
+
+
 
  }
 

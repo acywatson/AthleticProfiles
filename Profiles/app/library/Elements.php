@@ -71,6 +71,11 @@ class Elements extends Component
      } else {
          unset($this->_headerMenu['navbar-left']['myprofile']);
      }
+     
+     unset($this->_headerMenu['navbar-left']['index']);
+     unset($this->_headerMenu['navbar-left']['about']);
+     unset($this->_headerMenu['navbar-left']['contact']);
+
      $controllerName = $this->view->getControllerName();
      foreach ($this->_headerMenu as $position => $menu) {
          echo '<div class="nav-collapse">';

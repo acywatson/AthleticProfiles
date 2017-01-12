@@ -20,6 +20,8 @@ public $enduranceScore;
 
 public $balanceScore;
 
+public $calScore;
+
 public $firstTime;
 
 public $sport;

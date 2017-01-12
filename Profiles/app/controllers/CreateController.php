@@ -23,6 +23,7 @@ class CreateController extends ControllerBase
                     'strengthScore'  => 100,
                     'enduranceScore' => 100,
                     'balanceScore'   => 100,
+                    'calScore'       => 100,
                     'firstTime'      => 1
                 ]);
 

@@ -1,6 +1,7 @@
 <?php $this->assets->outputCss(); ?>
 
 <?= $this->elements->getMenu() ?>
+
 <div class="container-fluid">
 
   <div class="row">

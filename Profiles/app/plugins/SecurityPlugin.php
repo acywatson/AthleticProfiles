@@ -40,7 +40,7 @@ class SecurityPlugin extends Plugin
 			}
 			//Private area resources
 			$privateResources = array(
-				'myprofile'    => array('index', 'create', 'edit', 'save')
+				'myprofile'    => array('index', 'create', 'edit', 'save', 'start', 'instructions')
 			);
 			foreach ($privateResources as $resource => $actions) {
 				$acl->addResource(new Resource($resource), $actions);

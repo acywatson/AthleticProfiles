@@ -11,10 +11,18 @@ class CreateForm extends Form
 {
     public function initialize()
     {
+      
+      $calScore = new Text("calScore");
+
+      $calScore->setLabel("Calorie Score");
+
+      $calScore->setAttribute("class", "form-control");
+
+      $this->add($calScore);
 
       $strengthScore = new Text("strengthScore");
 
-      $strengthScore->setLabel("Strength Score");
+      $strengthScore->setLabel("Push Up Score");
 
       $strengthScore->setAttribute("class", "form-control");
 
@@ -22,7 +30,7 @@ class CreateForm extends Form
 
       $enduranceScore = new Text("enduranceScore");
 
-      $enduranceScore->setLabel("Endurance Score");
+      $enduranceScore->setLabel("Plank Score");
 
       $enduranceScore->setAttribute("class", "form-control");
 
@@ -30,7 +38,7 @@ class CreateForm extends Form
 
       $balanceScore = new Text("balanceScore");
 
-      $balanceScore->setLabel("Balance Score");
+      $balanceScore->setLabel("Ring Row/Pull Up Score");
 
       $balanceScore->setAttribute("class", "form-control");
 

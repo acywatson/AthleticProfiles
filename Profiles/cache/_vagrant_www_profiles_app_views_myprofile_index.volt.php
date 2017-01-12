@@ -14,11 +14,11 @@
 
 <h3>Sport: <?= $sport ?> </h3>
 
-<h3>Strength Score: <?= $strengthScore ?></h3>
+<h3>Push Up Score: <?= $strengthScore ?></h3>
 
-<h3>Endurance Score: <?= $enduranceScore ?></h3>
+<h3>Plank Score: <?= $enduranceScore ?></h3>
 
-<h3>Balance Score: <?= $balanceScore ?></h3>
+<h3>Ring Row/Pull Up Score: <?= $balanceScore ?></h3>
 
 <br>
 
