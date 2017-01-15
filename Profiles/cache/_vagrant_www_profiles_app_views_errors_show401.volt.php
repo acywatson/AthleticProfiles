@@ -1,6 +1,6 @@
 <?php $this->assets->outputCss(); ?>
 
-{{content()}}
+<?= $this->getContent() ?>
 
 <div class="container-fluid">
 
