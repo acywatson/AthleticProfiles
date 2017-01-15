@@ -10,18 +10,18 @@ class ErrorsController extends ControllerBase
 
     public function show404Action()
     {
-      $this->flash->error("404");
+      $this->flash->error("Error Code 404 - Resource not found.");
     }
 
     public function show401Action()
     {
-      $this->flash->error("401");
+      $this->flash->error("Error Code 401 - Access Denied");
     }
 
     public function show500Action()
     {
-      $this->flash->error("500");
-    
+      $this->flash->error("Error Code 500 - Internal Server Error");
+
     }
 
 }
