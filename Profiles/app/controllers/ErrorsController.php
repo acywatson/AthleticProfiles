@@ -21,6 +21,7 @@ class ErrorsController extends ControllerBase
     public function show500Action()
     {
       $this->flash->error("500");
+    
     }
 
 }

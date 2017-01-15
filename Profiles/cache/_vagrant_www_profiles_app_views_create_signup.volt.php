@@ -1,14 +1,22 @@
-<?php $this->assets->outputCss(); ?>
+<?php
 
-{{ elements.getMenu() }}
+$this->assets->outputCss();
 
-<div class="container-fluid create-profile">
+?>
+
+<?= $this->tag->getDoctype() ?>
+
+<html>
+
+<div class="container-fluid register">
   <div class="row">
     <div class="col-lg-12">
 
-<h1>Create Your Athletic Profile</h1>
+<h1>Create an Account</h1>
 
-<form method="post" action="/Profiles/myprofile/save">
+
+
+<form method="post" action="/Profiles/create/signup">
 
     <?php
 
@@ -50,20 +58,8 @@
     </div>
 </form>
 
-<h2>Instructions</h2>
-<p>To test (or re-test), complete the following:</p>
-<ul>
+</div>
+</div>
+</div>
 
-  <li>12 min Bike/Row for max calories.</li>
-  <li>Rest exactly 60 seconds</li>
-  <li>Perform as many push ups as possible in 60 seconds</li>
-  <li>Hold a perfect forearm plank for as long as possible (stop at 60 seconds)</li>
-  <li>Perform as many pull ups or ring rows** as possible in 60 seconds</li>
-
-</ul>
-
-<p>**For ring rows, adjust rings so they are at hip height.  Your feet should be directly under the rings before completing your first rep.</p>
-
-    </div> <!-- col-lg-12 -->
-  </div> <!-- row -->
-</div> <!-- container-fluid -->
+</html>

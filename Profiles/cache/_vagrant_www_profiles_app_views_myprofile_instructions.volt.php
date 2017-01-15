@@ -20,7 +20,7 @@ echo Phalcon\Tag::linkTo(["myprofile/create", "Let's do it!", "class" => "btn bt
 ?>
 
 <?php
-echo Phalcon\Tag::linkTo(["index", "Eh. Nevermind...", "class" => "btn btn-large btn-primary"]);
+echo Phalcon\Tag::linkTo(["myprofile/create", "Eh. Nevermind...", "class" => "btn btn-large btn-primary"]);
 ?>
 
     </div> <!-- col-lg-12 -->
