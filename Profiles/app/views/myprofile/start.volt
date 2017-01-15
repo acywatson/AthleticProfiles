@@ -17,14 +17,14 @@
 
 </ul>
 
-The profile creation process will take about 15 minutes, once you start.
+<p>The profile creation process will take about 15 minutes, once you start.</p>
 
 <?php
 echo Phalcon\Tag::linkTo(["myprofile/instructions", "I'm ready now!", "class" => "btn btn-large btn-primary"]);
 ?>
 
 <?php
-echo Phalcon\Tag::linkTo(["myprofile/index", "I'll do it later!", "class" => "btn btn-large btn-primary"]);
+echo Phalcon\Tag::linkTo(["myprofile/create", "I'll do it later!", "class" => "btn btn-large btn-primary"]);
 ?>
 
     </div> <!-- col-lg-12 -->

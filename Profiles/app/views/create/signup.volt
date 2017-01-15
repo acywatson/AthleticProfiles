@@ -13,8 +13,6 @@ $this->assets->outputCss();
     <div class="col-lg-12">
 
 <h1>Create an Account</h1>
-<?php $this->flash->error("This email address is already registered."); ?>
-
 
 <form method="post" action="/Profiles/create/signup">
 
@@ -33,7 +31,9 @@ $this->assets->outputCss();
                 echo '<div class="messages">';
 
                 foreach ($messages as $message) {
+                    echo "<div class='alert alert-danger'>";
                     echo $message;
+                    echo "</div>";
                 }
 
                 echo "</div>";

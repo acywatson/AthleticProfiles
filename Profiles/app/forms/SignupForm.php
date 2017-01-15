@@ -7,6 +7,7 @@ use Phalcon\Forms\Element\Password;
 use Phalcon\Validation\Validator\PresenceOf;
 use Phalcon\Validation\Validator\Email;
 use Phalcon\Validation\Validator\Numericality;
+use Phalcon\Validation\Validator\Uniqueness;
 
 class SignupForm extends Form
 {
@@ -62,6 +63,7 @@ class SignupForm extends Form
           'message' => "Please enter a valid email address."
 
         ))
+
       ));
 
       $this->add($email);
@@ -82,5 +84,14 @@ class SignupForm extends Form
 
       $this->add($password);
 
+    }
+
+    public function messages($name)
+    {
+        if ($this->hasMessagesFor($name)) {
+            foreach ($this->getMessagesFor($name) as $message) {
+                $this->flash->error($message);
+            }
+        }
     }
 }
